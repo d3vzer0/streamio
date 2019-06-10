@@ -1,0 +1,9 @@
+[submodule "ui"]
+	path = ui
+	url = https://github.com/d3vzer0/streamio-ui.git
+[submodule "api"]
+	path = api
+	url = https://github.com/d3vzer0/streamio-api.git
+[submodule "streaming"]
+	path = streaming
+	url = https://github.com/d3vzer0/streamio-faust.git
