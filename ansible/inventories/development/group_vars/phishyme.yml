@@ -11,7 +11,7 @@
 
 phishyme:
   install_dir: "/opt/phishyme" # Install location for source code
-  api_dest: "https://{{ hostvars['rtn-dev-01']['ansible_default_ipv4']['address'] }}:8443" # IP/Domain used inside the UI to perform API calls
+  api_dest: "https://{{ hostvars['phish-dev-01']['ansible_default_ipv4']['address'] }}:8443" # IP/Domain used inside the UI to perform API calls
   cors: "*" # Change value to enforce CORS policy (ie. only allow API requests from IP/domain 'X')
 
 database:
@@ -21,9 +21,9 @@ database:
 proxy:
   ui:
     container: "phishyme-ui" # No need to change - container name for our UI container, 
-    domain: "{{ hostvars['rtn-dev-01']['ansible_default_ipv4']['address'] }}" # CN for our self signed cert
+    domain: "{{ hostvars['phish-dev-01']['ansible_default_ipv4']['address'] }}" # CN for our self signed cert
     port: 8443 # Port exposed by nginx that will forward requests to our UI container
   
   api:
     container: "phishyme-api" # No need to change - container name for our API container, 
-    domain: "{{ hostvars['rtn-dev-01']['ansible_default_ipv4']['address'] }}" # CN for our self signed cert
+    domain: "{{ hostvars['phish-dev-01']['ansible_default_ipv4']['address'] }}" # CN for our self signed cert

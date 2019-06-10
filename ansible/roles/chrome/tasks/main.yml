@@ -3,8 +3,9 @@
     image: selenium/node-chrome:latest
     state: started
     recreate: yes
+    name: chrome
     env:
-      HUB_HOST: selenium
-      HUB_PORT: 4444
+      HUB_HOST: "selenium"
+      HUB_PORT: "4444"
     networks:
       - name: backend_network

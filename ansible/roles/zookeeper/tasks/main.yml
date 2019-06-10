@@ -3,9 +3,10 @@
   docker_container:
     image: confluentinc/cp-zookeeper:latest
     state: started
+    name: zookeeper
     recreate: yes
     env:
-      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_CLIENT_PORT: "2181"
     networks:
       - name: backend_network
         aliases:

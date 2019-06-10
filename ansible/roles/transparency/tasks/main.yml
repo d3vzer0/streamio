@@ -1,0 +1,13 @@
+- name: Run Transparency container
+  docker_container:
+    image: confluentinc/cp-kafka:latest
+    name: kafka
+    state: started
+    recreate: yes
+    env:
+      STREAM_NAME: "nootnoot-transparency"
+      STREAM_TYPE: "streaming.transparency"
+    networks:
+      - name: backend_network
+        aliases:
+          - kafka

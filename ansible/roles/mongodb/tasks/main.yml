@@ -36,7 +36,7 @@
     login_user: "{{ passwords.mongo_root_user }}"
     login_password: "{{ passwords.mongo_root_pass }}"
     database: "{{ database.db }}"
-    user: "{{ database.mongo_phishyme_user }}"
+    user: "{{ database.user }}"
     password: "{{ passwords.mongo_phishyme_pass }}"
     state: present
     roles: readWrite,dbAdmin
