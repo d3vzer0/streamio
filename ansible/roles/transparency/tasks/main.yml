@@ -1,7 +1,25 @@
+- name: Archiving streaming components
+  archive:
+    path: "../streaming"
+    dest: "../streaming.tgz"
+  delegate_to: localhost
+  become: no
+
+- name: Extract streaming components to target
+  unarchive:
+    src: "../streaming.tgz"
+    dest: "{{ phishyme.install_dir }}"
+
+- name: Build Transparency container
+  docker_image:
+    name: phishyme/transparency
+    path: "{{ phishyme.install_dir }}/streaming"
+    force: yes
+
 - name: Run Transparency container
   docker_container:
-    image: confluentinc/cp-kafka:latest
-    name: kafka
+    image: phishyme/transparency
+    name: transparency
     state: started
     recreate: yes
     env:
@@ -10,4 +28,4 @@
     networks:
       - name: backend_network
         aliases:
-          - kafka
+          - transparency

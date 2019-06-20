@@ -5,7 +5,7 @@
     recreate: yes
     name: chrome
     env:
-      HUB_HOST: "selenium"
+      HUB_HOST: "hub"
       HUB_PORT: "4444"
     networks:
       - name: backend_network

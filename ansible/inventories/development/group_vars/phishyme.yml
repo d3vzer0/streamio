@@ -27,3 +27,4 @@ proxy:
   api:
     container: "phishyme-api" # No need to change - container name for our API container, 
     domain: "{{ hostvars['phish-dev-01']['ansible_default_ipv4']['address'] }}" # CN for our self signed cert
+    port: 5000

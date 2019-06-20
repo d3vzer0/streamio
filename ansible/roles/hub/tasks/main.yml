@@ -2,7 +2,7 @@
   docker_container:
     image: selenium/hub:latest
     state: started
-    name: grid
+    name: hub
     recreate: yes
     env:
       GRID_BROWSER_TIMEOUT: "20"
@@ -13,4 +13,4 @@
     networks:
       - name: backend_network
         aliases:
-          - grid
+          - hub

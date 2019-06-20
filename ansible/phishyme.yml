@@ -14,14 +14,14 @@
   tags: ['backend', 'streamio']
   become: yes
   roles:
+    - role: zookeeper
+      tags: ['zookeeper']
+    - role: kafka
+      tags: ['kafka']
     - role: mongodb
       tags: ['mongodb']
     - role: api
       tags: ['api']
-    - role: kafka
-      tags: ['kafka']
-    - role: zookeeper
-      tags: ['zookeeper']
 
 - hosts: frontend
   tags: ['frontend', 'streamio']
@@ -34,8 +34,8 @@
   tags: ['selenium', 'streamio']
   become: yes
   roles:
-    - role: grid
-      tags: ['grid']
+    - role: hub
+      tags: ['hub']
     - role: chrome
       tags: ['chrome']
 
@@ -48,6 +48,16 @@
     - role: proxy
       tags: ['proxy'] 
 
+- hosts: streaming
+  tags: ['streaming', 'streamio']
+  become: yes
+  roles:
+    - role: transparency
+      tags: ['transparency']
+    - role: wordmatching
+      tags: ['wordmatching']
+    - role: scraper
+      tags: ['scraper']
 
 # - hosts: backend
 #   tags: ['backend', 'utils']

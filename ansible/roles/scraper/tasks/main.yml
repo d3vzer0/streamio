@@ -1,0 +1,15 @@
+- name: Run scraper container
+  docker_container:
+    image: phishyme/transparency
+    name: scraper
+    state: started
+    recreate: yes
+    env:
+      STREAM_NAME: "nootnoot-scraper"
+      STREAM_TYPE: "streaming.scraper"
+      MONGO_USER: "{{ passwords.mongo_phishyme_user }}"
+      MONGO_PASS: "{{ passwords.mongo_phishyme_pass }}"
+    networks:
+      - name: backend_network
+        aliases:
+          - scraper

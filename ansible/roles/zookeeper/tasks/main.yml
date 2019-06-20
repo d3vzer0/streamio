@@ -1,4 +1,8 @@
 
+- name: Making sure backend docker network exists
+  docker_network:
+    name: backend_network
+
 - name: Run Zookeeper container
   docker_container:
     image: confluentinc/cp-zookeeper:latest

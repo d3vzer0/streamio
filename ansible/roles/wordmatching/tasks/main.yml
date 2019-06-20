@@ -1,0 +1,15 @@
+- name: Run Wordmatching container
+  docker_container:
+    image:  phishyme/transparency
+    name: wordmatching
+    state: started
+    recreate: yes
+    env:
+      STREAM_NAME: "nootnoot-wordmatching"
+      STREAM_TYPE: "streaming.wordmatching"
+      MONGO_USER: "{{ passwords.mongo_phishyme_user }}"
+      MONGO_PASS: "{{ passwords.mongo_phishyme_pass }}"
+    networks:
+      - name: backend_network
+        aliases:
+          - wordmatching
