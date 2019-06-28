@@ -8,7 +8,6 @@
     image: confluentinc/cp-zookeeper:latest
     state: started
     name: zookeeper
-    recreate: yes
     env:
       ZOOKEEPER_CLIENT_PORT: "2181"
     networks:

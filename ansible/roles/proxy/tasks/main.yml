@@ -27,5 +27,4 @@
       - "{{ proxy_target_dir }}/tls:/etc/nginx/tls"
 
     ports:
-      - "{{ proxy.api.port }}:{{ proxy.api.port }}"
       - "{{ proxy.ui.port }}:{{ proxy.ui.port }}"

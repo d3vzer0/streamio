@@ -38,8 +38,9 @@
       FLASK_SECRET: "{{ passwords.api_secret }}"
       CORS_DOMAIN: "{{ phishyme.cors }}"
       MONGO_PASSWORD: "{{ passwords.mongo_phishyme_pass }}"
+      MONGO_USER: "{{ database.user }}"
+      MONGO_DB: "{{ database.db }}"
     networks:
       - name: backend_network
         aliases:
           - phishyme-api
- 
