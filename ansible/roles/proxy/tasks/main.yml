@@ -18,13 +18,10 @@
       - name: frontend_network
         aliases:
           - phishyme-proxy
-        links:
-          - phishyme-ui
       - name: backend_network
         aliases:
           - phishyme-proxy
-        links:
-          - phishyme-backend
+        
     volumes:
       - "{{ proxy_target_dir }}/proxy.conf:/etc/nginx/conf.d/proxy.conf"
       - "{{ proxy_target_dir }}/tls:/etc/nginx/tls"
