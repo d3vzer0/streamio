@@ -19,4 +19,6 @@ Be sure to change all the configuration options inside the 'inventories' directo
 
 Running the playbook can be done in various ways. The above example assumes you have your private key cached in the ssh-agent and use sudo for extra privileges. 
 
-The first install/build can take a while depending on your download speeds. When the playbook is finished, you can access the UI via https://<your_server_ip>:8443/#/hits. There are no authentication capabilities available for now, it's advised to create a simple NGINX authentication config to restrict access to the portal and API. The target server already has a nginx config present that you can adjust @ /opt/phishmy/proxy/proxy.conf
+The first install/build can take a while depending on your download speeds. When the playbook is finished, you can access the UI via https://<your_server_ip>:8443/#/install to create your first user. You will be redirected to the login window afterwards.
+
+PS. The install API (ie. first user creation) only works when no admin user is present in the DB.
