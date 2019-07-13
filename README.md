@@ -23,7 +23,7 @@ The first install/build can take a while depending on your download speeds. When
 
 PS. The install API (ie. first user creation) only works when no admin user is present in the DB.
 
-## Example Screenshots
+## Example Screenshots (Dummy data)
 
 <img width="1645" alt="match" src="https://user-images.githubusercontent.com/34250156/61177492-22afa980-a5d7-11e9-8260-5889b9bdd776.png">
 
