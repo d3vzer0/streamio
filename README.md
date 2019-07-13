@@ -22,3 +22,12 @@ Running the playbook can be done in various ways. The above example assumes you 
 The first install/build can take a while depending on your download speeds. When the playbook is finished, you can access the UI via https://<your_server_ip>:8443/#/install to create your first user. You will be redirected to the login window afterwards.
 
 PS. The install API (ie. first user creation) only works when no admin user is present in the DB.
+
+## Example Screenshots
+
+<img width="1645" alt="match" src="https://user-images.githubusercontent.com/34250156/61177492-22afa980-a5d7-11e9-8260-5889b9bdd776.png">
+
+
+<img width="1655" alt="screenshots" src="https://user-images.githubusercontent.com/34250156/61177484-fe53cd00-a5d6-11e9-9ec6-2fe681259d30.png">
+
+
