@@ -5,6 +5,8 @@ This repo contains a sample Faust project to stream Certificate Transparancy dat
 
 Just kidding. The project contains a API+WebUI to manage plain and simple keyword monitoring. You have the ability to add regular expressions and fuzzy terms and monitor newly requested certificates. The application makes use of Faust tables to persist transparency offsets. In the case of a crash, the application will still fetch all the missed certificitates during downtime. You'll never miss a certificate :)
 
+Details on how the agents/flows are structured can be found @ https://www.d3vzer0.com/streamio-domain-cert-monitoring/
+
 
 ## 1 Getting started
 - **Clone the quickstart repo to your system:** `git clone https://github.com/d3vzer0/streamio --recurse`
@@ -22,3 +24,12 @@ Running the playbook can be done in various ways. The above example assumes you 
 The first install/build can take a while depending on your download speeds. When the playbook is finished, you can access the UI via https://<your_server_ip>:8443/#/install to create your first user. You will be redirected to the login window afterwards.
 
 PS. The install API (ie. first user creation) only works when no admin user is present in the DB.
+
+## Example Screenshots (Dummy data)
+
+<img width="1645" alt="match" src="https://user-images.githubusercontent.com/34250156/61177492-22afa980-a5d7-11e9-8260-5889b9bdd776.png">
+
+
+<img width="1655" alt="screenshots" src="https://user-images.githubusercontent.com/34250156/61177484-fe53cd00-a5d6-11e9-9ec6-2fe681259d30.png">
+
+
