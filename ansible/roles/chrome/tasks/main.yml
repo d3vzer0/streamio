@@ -7,5 +7,7 @@
     env:
       HUB_HOST: "hub"
       HUB_PORT: "4444"
+      NODE_MAX_INSTANCES: 3
+      NODE_MAX_SESSION: 3
     networks:
       - name: backend_network

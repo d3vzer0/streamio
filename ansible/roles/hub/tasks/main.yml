@@ -7,8 +7,6 @@
     env:
       GRID_BROWSER_TIMEOUT: "20"
       GRID_TIMEOUT: "15"
-      NODE_MAX_SESSION: "10"
-      NODE_MAX_INSTANCES: "10"
 
     networks:
       - name: backend_network
